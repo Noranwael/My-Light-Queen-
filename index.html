@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTIRE | Premium Clothing Brand</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Notification Toast -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+                <a href="#/" class="logo">ATTIRE.</a>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
+                <button class="close-menu-btn" id="close-menu-btn"><i class="fas fa-times"></i></button>
+                <a href="#/" class="nav-link">Home</a>
+                <a href="#/shop" class="nav-link">Shop</a>
+                <a href="#/about" class="nav-link">About</a>
+                <a href="#/contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <div class="search-container">
+                    <button id="search-toggle"><i class="fas fa-search"></i></button>
+                    <div class="search-box" id="search-box">
+                        <input type="text" id="search-input" placeholder="Search products...">
+                        <button id="search-submit"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- User Account/Auth -->
+                <a href="#/auth" class="nav-icon" title="Account"><i class="far fa-user"></i></a>
+                <!-- Wishlist -->
+                <a href="#/wishlist" class="nav-icon wishlist-icon" title="Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="badge" id="wishlist-count">0</span>
+                </a>
+                <!-- Cart -->
+                <button class="nav-icon cart-icon" id="cart-toggle" title="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Drawer Off-canvas -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart Items injected via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <p class="shipping-note">Shipping and taxes calculated at checkout.</p>
+            <a href="#/checkout" class="btn primary-btn btn-block" id="checkout-btn">Checkout</a>
+            <button class="btn secondary-btn btn-block" style="margin-top: 10px;" id="continue-shopping">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Main Content Dynamic Container -->
+    <main id="main-content">
+        <!-- Content will be injected here by app.js -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <h2 class="footer-logo">ATTIRE.</h2>
+                <p>Redefining modern elegance with premium materials and sustainable fashion. Experience true quality.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#/shop?cat=new">New Arrivals</a></li>
+                    <li><a href="#/shop?cat=bestsellers">Best Sellers</a></li>
+                    <li><a href="#/shop?cat=clothing">Clothing</a></li>
+                    <li><a href="#/shop?cat=accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ATTIRE Brand. All rights reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./app.js"></script>
+</body>
+</html>
